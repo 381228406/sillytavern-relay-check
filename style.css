@@ -1,0 +1,232 @@
+/* 中转检测 — prefixed to avoid leaking into core SillyTavern styles */
+
+.relay-check-settings .relay-check-current {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.relay-check-settings .relay-check-row {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    font-size: calc(var(--mainFontSize) * 0.95);
+}
+
+.relay-check-settings .relay-check-k {
+    flex: 0 0 5.5em;
+    opacity: 0.75;
+}
+
+.relay-check-settings .relay-check-v {
+    flex: 1 1 auto;
+    word-break: break-all;
+}
+
+.relay-check-settings .relay-check-hint,
+.relay-check-settings .relay-check-disclaimer {
+    display: block;
+    opacity: 0.8;
+    line-height: 1.4;
+    margin-top: 6px;
+}
+
+.relay-check-settings .relay-check-verdict {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--SmartThemeBorderColor);
+    font-weight: 600;
+    width: fit-content;
+}
+
+.relay-check-settings .relay-check-verdict.is-ok {
+    color: #7dcea0;
+    border-color: #7dcea0;
+}
+
+.relay-check-settings .relay-check-verdict.is-series {
+    color: #f0c36d;
+    border-color: #f0c36d;
+}
+
+.relay-check-settings .relay-check-verdict.is-route {
+    color: #e67e22;
+    border-color: #e67e22;
+}
+
+.relay-check-settings .relay-check-verdict.is-error {
+    color: #ee6b6b;
+    border-color: #ee6b6b;
+}
+
+.relay-check-settings .relay-check-verdict.is-unknown {
+    opacity: 0.85;
+}
+
+.relay-check-settings .relay-check-summary {
+    margin-top: 8px;
+    white-space: pre-wrap;
+    line-height: 1.45;
+}
+
+.relay-check-settings .relay-check-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.relay-check-settings .relay-check-item {
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: color-mix(in srgb, var(--SmartThemeBlurTintColor, transparent) 70%, transparent);
+}
+
+.relay-check-settings .relay-check-item h4 {
+    margin: 0 0 4px 0;
+    font-size: calc(var(--mainFontSize));
+}
+
+.relay-check-settings .relay-check-item p {
+    margin: 0;
+    white-space: pre-wrap;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.relay-check-settings .relay-check-history {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 6px 0 4px;
+    max-height: 220px;
+    overflow: auto;
+}
+
+.relay-check-settings .relay-check-history-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 4px 6px;
+    border: 1px solid transparent;
+}
+
+.relay-check-settings .relay-check-history-item:hover {
+    border-color: var(--SmartThemeBorderColor);
+}
+
+.relay-check-settings .relay-check-history-item .relay-check-history-label {
+    flex: 0 0 auto;
+    font-weight: 600;
+}
+
+.relay-check-settings .relay-check-history-item .relay-check-history-meta {
+    flex: 1 1 auto;
+    opacity: 0.8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.relay-check-settings .relay-check-empty {
+    opacity: 0.7;
+    padding: 4px 0;
+}
+
+/* Top-bar / connection status badge */
+#relay_check_badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--SmartThemeBorderColor);
+    background: var(--SmartThemeBlurTintColor, transparent);
+    color: inherit;
+    cursor: pointer;
+    font-size: calc(var(--mainFontSize) * 0.9);
+    line-height: 1.2;
+    max-width: 12em;
+    vertical-align: middle;
+    user-select: none;
+}
+
+#relay_check_badge:hover {
+    filter: brightness(1.1);
+}
+
+#relay_check_badge .relay-check-badge-dot {
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    background: currentColor;
+    flex: 0 0 auto;
+}
+
+#relay_check_badge.is-ok {
+    color: #7dcea0;
+    border-color: #7dcea0;
+}
+
+#relay_check_badge.is-series {
+    color: #f0c36d;
+    border-color: #f0c36d;
+}
+
+#relay_check_badge.is-route {
+    color: #e67e22;
+    border-color: #e67e22;
+}
+
+#relay_check_badge.is-error {
+    color: #ee6b6b;
+    border-color: #ee6b6b;
+}
+
+#relay_check_badge .relay-check-badge-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.relay-check-popup {
+    text-align: left;
+    max-width: 36rem;
+}
+
+.relay-check-popup .relay-check-verdict {
+    display: inline-flex;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--SmartThemeBorderColor);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.relay-check-popup .relay-check-item {
+    margin: 8px 0;
+}
+
+.relay-check-popup .relay-check-item h4 {
+    margin: 0 0 2px 0;
+}
+
+.relay-check-popup .relay-check-item p {
+    margin: 0;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    #relay_check_badge .relay-check-badge-text {
+        max-width: 4.5em;
+    }
+}

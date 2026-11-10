@@ -1,0 +1,17 @@
+{
+    "display_name": "中转检测",
+    "loading_order": 50,
+    "requires": [],
+    "optional": [],
+    "dependencies": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "大总管",
+    "version": "1.0.0",
+    "homePage": "",
+    "auto_update": false,
+    "minimum_client_version": "1.13.0",
+    "hooks": {
+        "activate": "onActivate"
+    }
+}

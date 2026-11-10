@@ -1,0 +1,66 @@
+<div class="relay-check-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>中转检测</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="relay-check-current">
+                <div class="relay-check-row">
+                    <span class="relay-check-k">当前来源</span>
+                    <span id="relay_check_source" class="relay-check-v">—</span>
+                </div>
+                <div class="relay-check-row">
+                    <span class="relay-check-k">请求模型</span>
+                    <span id="relay_check_model" class="relay-check-v">—</span>
+                </div>
+                <div class="relay-check-row">
+                    <span class="relay-check-k">自定义地址</span>
+                    <span id="relay_check_url" class="relay-check-v">—</span>
+                </div>
+            </div>
+
+            <div class="flex-container flexGap10 marginTop10">
+                <div id="relay_check_btn_quick" class="menu_button menu_button_icon">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>一键检测</span>
+                </div>
+                <div id="relay_check_btn_deep" class="menu_button menu_button_icon">
+                    <i class="fa-solid fa-microscope"></i>
+                    <span>深度检测</span>
+                </div>
+            </div>
+            <small class="relay-check-hint">
+                一键检测：状态 / 模型列表 + 1 次极短生成。深度检测会再跑回显、约 2k–4k 针测、流式对比，会多消耗额度。
+            </small>
+
+            <label class="checkbox_label marginTop10" for="relay_check_auto_monitor">
+                <input id="relay_check_auto_monitor" type="checkbox" />
+                <span>自动监控正常生成（默认开，不额外打探测）</span>
+            </label>
+            <label class="checkbox_label" for="relay_check_toast">
+                <input id="relay_check_toast" type="checkbox" />
+                <span>发现问题用提示条提醒（不会刷屏）</span>
+            </label>
+
+            <div class="relay-check-verdict-wrap marginTop10">
+                <div id="relay_check_verdict" class="relay-check-verdict is-unknown">尚未检测</div>
+                <div id="relay_check_summary" class="relay-check-summary">点击「一键检测」或使用斜杠命令 <code>/relaycheck</code>、<code>/中转检测</code>。</div>
+            </div>
+
+            <div id="relay_check_items" class="relay-check-items"></div>
+
+            <div class="flex-container flexGap10 alignItemsCenter marginTop10">
+                <strong>最近记录</strong>
+                <div id="relay_check_btn_clear" class="menu_button menu_button_icon">
+                    <span>清空</span>
+                </div>
+            </div>
+            <div id="relay_check_history" class="relay-check-history"></div>
+
+            <small class="relay-check-disclaimer">
+                这是辅助判断，不能 100% 证明官方真模型。密钥始终走酒馆后端代理，不会发到第三方。
+            </small>
+        </div>
+    </div>
+</div>
